@@ -1356,7 +1356,8 @@ def get_recoE(part):
 
 
 def get_genEta(part):
-    return part.Eta
+    return abs(part.Eta)
+    # return part.Eta
 
 
 # _______________________________________________________________________________
@@ -1364,7 +1365,8 @@ def get_genEta(part):
 
 
 def get_recoEta(part):
-    return part.Eta
+    return abs(part.Eta)
+    # return part.Eta
 
 
 # ________________________________________________________________________________
@@ -1491,3 +1493,33 @@ def get_genCorrDZCtgTheta(part):
 
 
 # ________________________________________________________________________________
+
+def get_recoCorrD0D0(part):
+    return get_corr(part, 0, 0)
+
+def get_genCorrD0D0(part):
+    return 0.0
+
+def get_recoCorrPhiPhi(part):
+    return get_corr(part, 1, 1)
+
+def get_genCorrPhiPhi(part):
+    return 0.0
+
+def get_recoCorrCC(part):
+    return get_corr(part, 2, 2)
+
+def get_genCorrCC(part):
+    return 0.0
+
+def get_recoCorrDZDZ(part):
+    return get_corr(part, 3, 3)
+
+def get_genCorrDZDZ(part):
+    return 0.0
+
+def get_recoCorrCtgThetaCtgTheta(part):
+    return get_corr(part, 4, 4)
+
+def get_genCorrCtgThetaCtgTheta(part):
+    return 0.0
